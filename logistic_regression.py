@@ -10,12 +10,11 @@ class LogisticRegression:
         self.C = C
         self.alpha = alpha
         self.tolerance = tolerance
-        self.add_intercept = True
+        self.add_intercept = add_intercept
     
     def fit(self, X, y):
         X_values = self.__get_values(X)
         X_ = self.__preprocess_data(X_values)
-        
         _, col_count = X_.shape
         y_ = self.__get_values(y)
         
