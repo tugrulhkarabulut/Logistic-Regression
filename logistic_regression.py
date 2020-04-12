@@ -58,9 +58,8 @@ class LogisticRegression:
         reg_matrix = np.zeros(coef.shape)
         reg_matrix[1:] = coef[1:]
         
-        reg_term = ( 1/(2*row_count) ) * ( reg_matrix ** 2 )
+        reg_term = 1 / (2*row_count) * ( reg_matrix ** 2 )
         reg_term_sum = reg_term.sum()
-        reg_term_sum = 0
         
 
         cost = self.C * ( -y * np.log(h_x) - (1 - y) * np.log(1 -  h_x) )
